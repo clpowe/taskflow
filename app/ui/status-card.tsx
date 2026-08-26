@@ -19,17 +19,13 @@ export interface StatusCardProps {
 export function StatusCard(handle: Handle<StatusCardProps>) {
   return () => (
     <article class="status-card" data-tone={handle.props.tone}>
-      <span
-      class='status-card-icon'
-      aria-hidden="true"
-      >{handle.props.icon}</span>
+      <span class="status-card-icon" aria-hidden="true">
+        {handle.props.icon}
+      </span>
       <div>
-        <strong>
-          {handle.props.label}
-        </strong>
+        <strong>{handle.props.label}</strong>
         <small>
-          {handle.props.count}{" "}
-          {handle.props.count === 1 ? "Task" : "Tasks"}
+          {handle.props.count} {handle.props.count === 1 ? 'Task' : 'Tasks'}
         </small>
       </div>
     </article>
