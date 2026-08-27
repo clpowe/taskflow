@@ -1,0 +1,39 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html", "x": 0, "y": 0, "w": 454, "h": 908, "title": "Current home" },
+    { "file": "VarA.dc.html", "x": 534, "y": 0, "w": 454, "h": 908, "title": "A · Denser feed" },
+    { "file": "VarB.dc.html", "x": 1068, "y": 0, "w": 454, "h": 908, "title": "B · Hero task" },
+    { "file": "VarC.dc.html", "x": 1602, "y": 0, "w": 454, "h": 908, "title": "C · Week strip" }
+  ],
+  "annotations": [
+    {
+      "id": "note-main",
+      "x": 0,
+      "y": 968,
+      "w": 454,
+      "text": "Current home, pixel-matched to app/actions/home.tsx + public/styles/app.css.\nReal seed data: 3 ongoing / 2 in process / 2 completed / 1 cancelled, feed ordered id DESC.\n\nWhat it costs: the 2x2 status grid eats 162px, so only ~5 of 8 tasks are visible before scrolling — and the first two are Cancelled and Completed, which are the two you can do nothing about."
+    },
+    {
+      "id": "note-a",
+      "x": 534,
+      "y": 968,
+      "w": 454,
+      "text": "A · Denser feed — axis: how much of the backlog fits on one screen.\nStatus grid collapses to a 48px chip row; task cards drop the 45.6px ring for a 4px bar. All 8 tasks fit with no scroll.\n\nTradeoff: the status counts lose their poster-sized presence, and the progress ring — the most distinctive thing in the current design — is gone."
+    },
+    {
+      "id": "note-b",
+      "x": 1068,
+      "y": 968,
+      "w": 454,
+      "text": "B · Hero task — axis: does the home screen answer \"what do I do now?\"\nOne large card for the next due task with status pill, step count, assignee stack and an Open action; counts shrink to a dot legend; everything else becomes a one-line row.\n\nTradeoff: needs a rule for picking the hero (soonest due? most progress?), and that rule will be wrong sometimes. Wasteful if you mostly browse rather than execute."
+    },
+    {
+      "id": "note-c",
+      "x": 1602,
+      "y": 968,
+      "w": 454,
+      "text": "C · Week strip — axis: time instead of recency.\nWeek of 24-30 Aug with per-day load dots, status tabs reusing the existing .tabs pattern, feed sorted by due date with today's card outlined coral. All 8 seed tasks land in one week, so the strip is genuinely informative.\n\nTradeoff: most vertical chrome of the three (62px strip + 33px tabs), and it breaks down for tasks with no due date — the schema allows dueDate: null."
+    }
+  ],
+  "launch": { "view": "canvas" }
+}

@@ -1,6 +1,6 @@
 import type { Handle } from 'remix/ui'
 
-import { TaskSummary } from '../data/tasks.ts'
+import type { TaskSummary } from '../data/tasks.ts'
 
 import { routes } from '../routes.ts'
 

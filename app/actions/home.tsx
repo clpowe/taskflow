@@ -1,5 +1,5 @@
-import { Handle } from 'remix/ui'
-import type { DashboardData } from '../data/task.ts'
+import type { Handle } from 'remix/ui'
+import type { DashboardData } from '../data/tasks.ts'
 import { AppDocument } from '../ui/app-document.tsx'
 import { AppShell } from '../ui/app-shell.tsx'
 import { StatusCard } from '../ui/status-card.tsx'

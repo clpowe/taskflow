@@ -1,8 +1,8 @@
 import type { Handle } from 'remix/ui'
-import { STATUS_LABELS, TASK_STATUSES, type TaskDetail } from '../../../data/task.ts'
-import { routes } from '../../../routes.ts'
-import { AppDocument } from '../../../ui/app-document.tsx'
-import { AppShell } from '../../../ui/app-shell.tsx'
+import { STATUS_LABELS, TASK_STATUSES, type TaskDetail } from '../../data/tasks.ts'
+import { routes } from '../../routes.ts'
+import { AppDocument } from '../../ui/app-document.tsx'
+import { AppShell } from '../../ui/app-shell.tsx'
 import { Temporal } from '@js-temporal/polyfill'
 
 export interface TaskDetailPageProps {

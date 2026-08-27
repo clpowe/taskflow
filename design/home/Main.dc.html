@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #111111; line-height: 1.45; }
+    p, h1, h2 { margin: 0; }
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: inherit; }
+    h1, h2, strong { line-height: 1.15; }
+  </style>
+</helmet>
+
+<div style="width: 454px; height: 908px; padding: 32px; display: grid; place-items: center; background: #d8d8d8;">
+  <div style="position: relative; display: flex; flex-direction: column; width: 390px; height: 844px; overflow: hidden; background: #ffffff; border-radius: 28.8px; box-shadow: 0 14px 30px rgb(0 0 0 / 12%);">
+
+    <main style="flex: 1; overflow: hidden; padding: 24px 17.6px 32px;">
+      <div style="display: flex; flex-direction: column; gap: 20px;">
+
+        <header style="display: flex; align-items: center; justify-content: space-between; gap: 16px;">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="display: inline-grid; width: 36.8px; height: 36.8px; place-items: center; flex: 0 0 auto; border: 2px solid #ffffff; border-radius: 50%; background: #f36b55; color: #111111; font-size: 10.4px; font-weight: 850;">BR</span>
+            <div>
+              <p style="font-size: 16.8px; font-weight: 800; line-height: 1.15;">Hi, Bruce 👋</p>
+              <small style="color: #787878; font-size: 12.8px;">Your daily adventure starts now</small>
+            </div>
+          </div>
+          <span style="display: inline-grid; width: 36px; height: 36px; place-items: center; flex: 0 0 auto; border-radius: 8.8px; background: #f4f5f5; font-size: 19.2px;">▦</span>
+        </header>
+
+        <section style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px;">
+
+          <article style="display: flex; align-items: center; gap: 10.4px; min-height: 75.2px; padding: 14.4px; border-radius: 14.4px; background: #4f9df9;">
+            <span style="display: grid; width: 28.8px; height: 28.8px; place-items: center; flex: 0 0 auto; border: 1px solid rgb(255 255 255 / 65%); border-radius: 50%; background: rgb(255 255 255 / 18%); font-weight: 800;">↻</span>
+            <div>
+              <strong style="display: block; font-size: 13.44px;">Ongoing</strong>
+              <small style="display: block; margin-top: 2.4px; opacity: 0.75; font-size: 10.4px;">3 Tasks</small>
+            </div>
+          </article>
+
+          <article style="display: flex; align-items: center; gap: 10.4px; min-height: 75.2px; padding: 14.4px; border-radius: 14.4px; background: #f8c445;">
+            <span style="display: grid; width: 28.8px; height: 28.8px; place-items: center; flex: 0 0 auto; border: 1px solid rgb(255 255 255 / 65%); border-radius: 50%; background: rgb(255 255 255 / 18%); font-weight: 800;">◷</span>
+            <div>
+              <strong style="display: block; font-size: 13.44px;">In Process</strong>
+              <small style="display: block; margin-top: 2.4px; opacity: 0.75; font-size: 10.4px;">2 Tasks</small>
+            </div>
+          </article>
+
+          <article style="display: flex; align-items: center; gap: 10.4px; min-height: 75.2px; padding: 14.4px; border-radius: 14.4px; background: #48c2c3;">
+            <span style="display: grid; width: 28.8px; height: 28.8px; place-items: center; flex: 0 0 auto; border: 1px solid rgb(255 255 255 / 65%); border-radius: 50%; background: rgb(255 255 255 / 18%); font-weight: 800;">✓</span>
+            <div>
+              <strong style="display: block; font-size: 13.44px;">Completed</strong>
+              <small style="display: block; margin-top: 2.4px; opacity: 0.75; font-size: 10.4px;">2 Tasks</small>
+            </div>
+          </article>
+
+          <article style="display: flex; align-items: center; gap: 10.4px; min-height: 75.2px; padding: 14.4px; border-radius: 14.4px; background: #f36b55;">
+            <span style="display: grid; width: 28.8px; height: 28.8px; place-items: center; flex: 0 0 auto; border: 1px solid rgb(255 255 255 / 65%); border-radius: 50%; background: rgb(255 255 255 / 18%); font-weight: 800;">×</span>
+            <div>
+              <strong style="display: block; font-size: 13.44px;">Cancelled</strong>
+              <small style="display: block; margin-top: 2.4px; opacity: 0.75; font-size: 10.4px;">1 Task</small>
+            </div>
+          </article>
+
+        </section>
+
+        <section style="display: flex; flex-direction: column; gap: 12px;">
+          <h2 style="font-size: 15.2px; font-weight: 750;">Recent Task</h2>
+
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+
+            <a href="#" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 76px; padding: 12px 13.6px; border: 1.5px solid #111111; border-radius: 14.4px; background: #ffffff; box-shadow: 0 3px 0 rgb(0 0 0 / 90%);">
+              <div style="display: flex; flex-direction: column; gap: 16px;">
+                <strong style="font-size: 13.6px;">Analytics review</strong>
+                <small style="color: #787878; font-size: 10.08px;">Meeting</small>
+              </div>
+              <div style="position: relative; display: grid; width: 45.6px; height: 45.6px; place-items: center; flex: 0 0 auto; border-radius: 50%; background: conic-gradient(#4f9df9 33%, #ECEFF0 0);">
+                <div style="position: absolute; inset: 5px; border-radius: 50%; background: #ffffff;"></div>
+                <span style="position: relative; z-index: 1; font-size: 10.4px; font-weight: 800;">33%</span>
+              </div>
+            </a>
+
+            <a href="#" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 76px; padding: 12px 13.6px; border: 1.5px solid #111111; border-radius: 14.4px; background: #ffffff; box-shadow: 0 3px 0 rgb(0 0 0 / 90%);">
+              <div style="display: flex; flex-direction: column; gap: 16px;">
+                <strong style="font-size: 13.6px;">QA handoff</strong>
+                <small style="color: #787878; font-size: 10.08px;">Development</small>
+              </div>
+              <div style="position: relative; display: grid; width: 45.6px; height: 45.6px; place-items: center; flex: 0 0 auto; border-radius: 50%; background: conic-gradient(#f36b55 0%, #ECEFF0 0);">
+                <div style="position: absolute; inset: 5px; border-radius: 50%; background: #ffffff;"></div>
+                <span style="position: relative; z-index: 1; font-size: 10.4px; font-weight: 800;">0%</span>
+              </div>
+            </a>
+
+            <a href="#" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 76px; padding: 12px 13.6px; border: 1.5px solid #111111; border-radius: 14.4px; background: #ffffff; box-shadow: 0 3px 0 rgb(0 0 0 / 90%);">
+              <div style="display: flex; flex-direction: column; gap: 16px;">
+                <strong style="font-size: 13.6px;">User interviews</strong>
+                <small style="color: #787878; font-size: 10.08px;">User Experience</small>
+              </div>
+              <div style="position: relative; display: grid; width: 45.6px; height: 45.6px; place-items: center; flex: 0 0 auto; border-radius: 50%; background: conic-gradient(#48c2c3 100%, #ECEFF0 0);">
+                <div style="position: absolute; inset: 5px; border-radius: 50%; background: #ffffff;"></div>
+                <span style="position: relative; z-index: 1; font-size: 10.4px; font-weight: 800;">100%</span>
+              </div>
+            </a>
+
+            <a href="#" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 76px; padding: 12px 13.6px; border: 1.5px solid #111111; border-radius: 14.4px; background: #ffffff; box-shadow: 0 3px 0 rgb(0 0 0 / 90%);">
+              <div style="display: flex; flex-direction: column; gap: 16px;">
+                <strong style="font-size: 13.6px;">Design system cleanup</strong>
+                <small style="color: #787878; font-size: 10.08px;">Design</small>
+              </div>
+              <div style="position: relative; display: grid; width: 45.6px; height: 45.6px; place-items: center; flex: 0 0 auto; border-radius: 50%; background: conic-gradient(#48c2c3 100%, #ECEFF0 0);">
+                <div style="position: absolute; inset: 5px; border-radius: 50%; background: #ffffff;"></div>
+                <span style="position: relative; z-index: 1; font-size: 10.4px; font-weight: 800;">100%</span>
+              </div>
+            </a>
+
+            <a href="#" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 76px; padding: 12px 13.6px; border: 1.5px solid #111111; border-radius: 14.4px; background: #ffffff; box-shadow: 0 3px 0 rgb(0 0 0 / 90%);">
+              <div style="display: flex; flex-direction: column; gap: 16px;">
+                <strong style="font-size: 13.6px;">Website for CourierGo.com</strong>
+                <small style="color: #787878; font-size: 10.08px;">Coding</small>
+              </div>
+              <div style="position: relative; display: grid; width: 45.6px; height: 45.6px; place-items: center; flex: 0 0 auto; border-radius: 50%; background: conic-gradient(#f8c445 40%, #ECEFF0 0);">
+                <div style="position: absolute; inset: 5px; border-radius: 50%; background: #ffffff;"></div>
+                <span style="position: relative; z-index: 1; font-size: 10.4px; font-weight: 800;">40%</span>
+              </div>
+            </a>
+
+            <a href="#" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 76px; padding: 12px 13.6px; border: 1.5px solid #111111; border-radius: 14.4px; background: #ffffff; box-shadow: 0 3px 0 rgb(0 0 0 / 90%);">
+              <div style="display: flex; flex-direction: column; gap: 16px;">
+                <strong style="font-size: 13.6px;">Mobile Apps for Track.id</strong>
+                <small style="color: #787878; font-size: 10.08px;">Development</small>
+              </div>
+              <div style="position: relative; display: grid; width: 45.6px; height: 45.6px; place-items: center; flex: 0 0 auto; border-radius: 50%; background: conic-gradient(#4f9df9 50%, #ECEFF0 0);">
+                <div style="position: absolute; inset: 5px; border-radius: 50%; background: #ffffff;"></div>
+                <span style="position: relative; z-index: 1; font-size: 10.4px; font-weight: 800;">50%</span>
+              </div>
+            </a>
+
+            <a href="#" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 76px; padding: 12px 13.6px; border: 1.5px solid #111111; border-radius: 14.4px; background: #ffffff; box-shadow: 0 3px 0 rgb(0 0 0 / 90%);">
+              <div style="display: flex; flex-direction: column; gap: 16px;">
+                <strong style="font-size: 13.6px;">Dashboard for ProSavvy</strong>
+                <small style="color: #787878; font-size: 10.08px;">User Experience</small>
+              </div>
+              <div style="position: relative; display: grid; width: 45.6px; height: 45.6px; place-items: center; flex: 0 0 auto; border-radius: 50%; background: conic-gradient(#4f9df9 75%, #ECEFF0 0);">
+                <div style="position: absolute; inset: 5px; border-radius: 50%; background: #ffffff;"></div>
+                <span style="position: relative; z-index: 1; font-size: 10.4px; font-weight: 800;">75%</span>
+              </div>
+            </a>
+
+            <a href="#" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 76px; padding: 12px 13.6px; border: 1.5px solid #111111; border-radius: 14.4px; background: #ffffff; box-shadow: 0 3px 0 rgb(0 0 0 / 90%);">
+              <div style="display: flex; flex-direction: column; gap: 16px;">
+                <strong style="font-size: 13.6px;">Website for Rune.io</strong>
+                <small style="color: #787878; font-size: 10.08px;">Design</small>
+              </div>
+              <div style="position: relative; display: grid; width: 45.6px; height: 45.6px; place-items: center; flex: 0 0 auto; border-radius: 50%; background: conic-gradient(#f8c445 40%, #ECEFF0 0);">
+                <div style="position: absolute; inset: 5px; border-radius: 50%; background: #ffffff;"></div>
+                <span style="position: relative; z-index: 1; font-size: 10.4px; font-weight: 800;">40%</span>
+              </div>
+            </a>
+
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <nav style="position: relative; display: grid; grid-template-columns: repeat(5, 1fr); align-items: center; min-height: 67.2px; padding: 8px 12px; border-top: 1px solid #ececec; background: #ffffff;">
+      <a href="#" style="display: grid; min-height: 43.2px; place-items: center; color: #f36b55; font-size: 20px;">⌂</a>
+      <a href="#" style="display: grid; min-height: 43.2px; place-items: center; color: #c9c9c9; font-size: 20px;">▣</a>
+      <a href="#" style="display: grid; width: 48px; height: 48px; place-items: center; justify-self: center; border-radius: 50%; background: #f36b55; color: #ffffff; font-size: 28.8px; box-shadow: 0 6px 16px rgb(243 107 85 / 35%);">+</a>
+      <a href="#" style="display: grid; min-height: 43.2px; place-items: center; color: #c9c9c9; font-size: 20px;">◫</a>
+      <a href="#" style="display: grid; min-height: 43.2px; place-items: center; color: #c9c9c9; font-size: 20px;">○</a>
+    </nav>
+
+  </div>
+</div>
+
+</x-dc>
+</body>
+</html>
