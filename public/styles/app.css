@@ -1211,8 +1211,20 @@
     background: var(--color-teal);
   }
 
+  .checklist-item[data-pending="true"] {
+    opacity: 0.7;
+  }
+
+  .checklist-item[data-pending="true"] .checkbox-button {
+    cursor: progress;
+  }
+
   .nav-item[data-active="true"] {
     color: var(--color-coral);
+  }
+
+  .checkbox-button:disabled {
+    cursor: progress;
   }
 
   .chart-line[data-series="in-progress"] {

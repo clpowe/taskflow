@@ -30,11 +30,85 @@ export const TaskChecklist = clientEntry(
             <span class="u-muted">{progress}%</span>
           </div>
 
-          <ul className="checklist">
+          <ul class="checklist">
             {items.map((item) => (
-              <ChecklistRow></ChecklistRow>
+              <ChecklistRow
+                key={item.id}
+                taskId={handle.props.taskId}
+                item={item}
+                onToggle={async (itemId) => {
+                  const previousItems = items
+
+                  items = items.map((item) =>
+                    item.id === itemId
+                      ? {
+                          ...item,
+
+                          completed: !item.completed,
+                        }
+                      : item,
+                  )
+
+                  await handle.update()
+
+                  const item = items.find((item) => item.id === itemId)
+
+                  if (!item) {
+                    return
+                  }
+
+                  try {
+                    const response = await fetch(
+                      routes.tasks.checklist.toggle.href({
+                        taskId: String(handle.props.taskId),
+
+                        itemId: String(itemId),
+                      }),
+                      {
+                        method: 'POST',
+
+                        body: new FormData(),
+                      },
+                    )
+
+                    if (!response.ok) {
+                      throw new Error(`Request failed with ${response.status}`)
+                    }
+                  } catch (error) {
+                    console.error(error)
+
+                    items = previousItems
+
+                    await handle.update()
+                  }
+                }}
+              />
             ))}
           </ul>
+
+          <form
+            class="add-checklist"
+            method="post"
+            action={routes.tasks.checklist.add.href({
+              taskId: String(handle.props.taskId),
+            })}
+          >
+            <label class="u-visually-hidden" htmlFor="checklist-label">
+              Add checklist item
+            </label>
+
+            <input
+              id="checklist-label"
+              name="label"
+              placeholder="Add checklist item"
+              maxLength={140}
+              required
+            />
+
+            <button class="button button-small" type="submit">
+              Add
+            </button>
+          </form>
         </section>
       )
     }

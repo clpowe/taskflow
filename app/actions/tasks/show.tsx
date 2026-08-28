@@ -1,3 +1,5 @@
+import { TaskChecklist } from './public/task-checklist.tsx'
+
 import type { Handle } from 'remix/ui'
 import { STATUS_LABELS, TASK_STATUSES, type TaskDetail } from '../../data/tasks.ts'
 import { routes } from '../../routes.ts'
@@ -121,80 +123,7 @@ export function TaskDetailPage(handle: Handle<TaskDetailPageProps>) {
               </button>
             </form>
 
-            <section
-              style={{
-                gap: '0.8rem',
-              }}
-              class="stack"
-            >
-              <div class="repel">
-                <h2 class="section-title">Checklist</h2>
-
-                <span class="u-muted">{task.progress}%</span>
-              </div>
-
-              <ul class="checklist">
-                {task.checklist.map((item) => (
-                  <li
-                    key={item.id}
-                    class="checklist-item"
-                    data-completed={item.completed ? 'true' : 'false'}
-                  >
-                    <form
-                      method="post"
-                      action={routes.tasks.checklist.toggle.href({
-                        taskId: String(task.id),
-
-                        itemId: String(item.id),
-                      })}
-                    >
-                      <button
-                        class="checkbox-button"
-                        type="submit"
-                        aria-pressed={item.completed}
-                        aria-label={
-                          item.completed
-                            ? `Mark "${item.label}" incomplete`
-                            : `Mark "${item.label}" complete`
-                        }
-                      >
-                        {item.completed ? '✓' : ''}
-                      </button>
-                    </form>
-
-                    <span>{item.label}</span>
-
-                    <span class="item-menu" aria-hidden="true">
-                      •••
-                    </span>
-                  </li>
-                ))}
-              </ul>
-
-              <form
-                class="add-checklist"
-                method="post"
-                action={routes.tasks.checklist.add.href({
-                  taskId: String(task.id),
-                })}
-              >
-                <label class="u-visually-hidden" htmlFor="checklist-label">
-                  Add checklist item
-                </label>
-
-                <input
-                  id="checklist-label"
-                  name="label"
-                  placeholder="Add checklist item"
-                  maxLength={140}
-                  required
-                />
-
-                <button class="button button-small" type="submit">
-                  Add
-                </button>
-              </form>
-            </section>
+            <TaskChecklist taskId={task.id} checklist={task.checklist} />
 
             <section id="comments" class="placeholder-panel">
               Comments will go here in the next enhancement.
